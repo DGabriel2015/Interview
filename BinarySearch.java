@@ -1,5 +1,5 @@
 /**
- * Created by lisy on 2015/3/24.
+ * 升序数组的二分查找，支持数组中有重复的元素，返回最早出现的元素的位置。
  */
 public class BinarySearch {
 	public static void main(String[] args){
@@ -16,7 +16,7 @@ public class BinarySearch {
 
 		int mid = 0;
 		while (left <= right) {
-			mid = left + ((right - left) >> 1);
+			mid = left + ((right - left) >> 1); // 防止int溢出
 			if (arr[mid] > value) {
 
 				right = mid - 1;
